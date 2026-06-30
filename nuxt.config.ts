@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devServer: {
     port: 3327,
   },
-  modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/scripts"],
+  modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/scripts", "motion-v/nuxt"],
   css: ["~/assets/css/main.css"],
   
   

@@ -1,6 +1,7 @@
 <template>
   <div>
     <UApp>
+      <DebugBreakpoints />
       <NuxtRouteAnnouncer />
       <NuxtLayout>
         <NuxtPage />
