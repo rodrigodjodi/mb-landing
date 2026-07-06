@@ -1,0 +1,12 @@
+@theme {
+  --color-accent: #DF00A9;
+  --color-ink: #0E0E10;
+  --color-soft: #6B6B70;
+  --color-line: #E6E5DF;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F5F4F0;
+  --color-media: #13131A;
+
+  --font-sans: 'Archivo', -apple-system, Helvetica, Arial, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+}
