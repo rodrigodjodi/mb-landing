@@ -6,8 +6,8 @@
       <span>19 empreendimentos publicados em 4 cidades</span>
       <span class="text-accent">•</span>
       <span>8 anos de mercado</span>
-      <span class="text-accent">•</span>
-      <span>Parceria contínua com incorporadoras como DeDomit, AGL e Bouw</span>
+      
+      
     </div>
   </section>
 </template>

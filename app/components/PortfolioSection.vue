@@ -13,12 +13,11 @@ import { portfolioClientes, portfolioChips } from '~/data/portfolio'
           </h2>
           <p class="m-0 text-lg leading-[1.62] text-soft">
             Ao longo de 8 anos, a Maquete de Bolso esteve presente em lançamentos de
-            incorporadoras como DeDomit, AGL e Bouw, entre outras — alguns deles, clientes
-            recorrentes.
+            incorporadoras como DeDomit, AGL e Bouw, entre outras.
           </p>
         </div>
         <span class="whitespace-nowrap font-mono text-xs tracking-[.08em] text-soft">
-          19 empreendimentos · 4 cidades · 2017–2025
+          19 empreendimentos · 4 cidades · 2017-2025
         </span>
       </div>
 
@@ -55,7 +54,7 @@ import { portfolioClientes, portfolioChips } from '~/data/portfolio'
         <div
           v-for="chip in portfolioChips"
           :key="chip"
-          class="flex items-center gap-[10px] border border-line bg-white px-4 py-[10px]"
+          class="flex items-center gap-2.5 border border-line bg-white px-4 py-[10px]"
         >
           <span class="text-sm font-semibold">{{ chip }}</span>
         </div>

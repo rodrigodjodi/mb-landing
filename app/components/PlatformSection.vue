@@ -28,11 +28,11 @@ const emBreve = [
       <div class="mb-[54px] flex max-w-[62ch] flex-col gap-[18px]">
         <span class="font-mono text-xs uppercase tracking-[.18em] text-accent">01 — A plataforma</span>
         <h2 class="m-0 text-[clamp(30px,4.2vw,52px)] font-extrabold leading-[1.04] tracking-[-.028em]">
-          Mais que uma maquete: uma plataforma de apresentação
+          Uma plataforma de apresentação
         </h2>
         <p class="m-0 text-lg leading-[1.62] text-soft">
           Cada empreendimento ganha um espaço próprio, reunindo maquete 360°, tours virtuais
-          pelas unidades, plantas detalhadas e espelho de vendas — tudo num único link, sem
+          pelas unidades, plantas detalhadas e espelho de vendas - tudo num único link, sem
           instalar nada.
         </p>
       </div>

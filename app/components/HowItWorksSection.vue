@@ -27,12 +27,12 @@ const steps = [
       <div class="mb-14 flex max-w-[62ch] flex-col gap-[18px]">
         <span class="font-mono text-xs uppercase tracking-[.18em] text-accent">03 — Como funciona</span>
         <h2 class="m-0 text-[clamp(30px,4.2vw,52px)] font-extrabold leading-[1.04] tracking-[-.028em]">
-          Tecnologia de ponta, sem complicação pra você
+          Tecnologia de ponta, sem complicação para você
         </h2>
         <p class="m-0 text-lg leading-[1.62] text-soft">
           Capturamos o empreendimento com voo de drone, processamos com tecnologia de
           fotogrametria e renderização 3D, e entregamos uma maquete interativa pronta para uso
-          em poucos dias — sem curva de aprendizado para sua equipe de vendas.
+          em poucos dias, sem curva de aprendizado para sua equipe de vendas.
         </p>
       </div>
 

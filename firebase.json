@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "maquete-de-bolso",
+    "public": ".output/public",
+    "predeploy": ["npm run generate"],
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

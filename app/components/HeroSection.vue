@@ -17,11 +17,11 @@ const stats = [
         </span>
         <h1 class="m-0 text-[clamp(40px,5.4vw,72px)] font-extrabold leading-[.98] tracking-[-.035em]">
           Seu empreendimento, explorável de qualquer tela
-          <span class="text-accent">antes da primeira unidade pronta.</span>
+          
         </h1>
         <p class="m-0 max-w-[48ch] text-[19px] leading-[1.58] text-soft">
           Maquetes virtuais interativas a partir de captura aérea real, entregues como uma
-          plataforma completa de apresentação para o seu lançamento.
+          plataforma completa de apresentação online para o seu lançamento.
         </p>
         <div class="flex flex-wrap gap-[14px]">
           <a
@@ -49,7 +49,7 @@ const stats = [
 
       <div class="flex w-full flex-col items-center gap-[18px]">
         <div class="flex h-[560px] w-full items-center justify-center">
-          <DeviceFrame class="h-full" src="https://newurban.maquetedebolso.com.br/" />
+          <DeviceFrame class="h-full" src="https://now.maquetedebolso.com.br/" />
         </div>
         <span class="text-center font-mono text-[10px] uppercase tracking-[.12em] text-soft">
           Mesma maquete · celular, tablet e TV · sem instalar nada

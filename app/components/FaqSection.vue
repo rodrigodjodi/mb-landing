@@ -9,11 +9,6 @@ const faqs = [
     resposta:
       'De 7 a 15 dias após a captura das imagens. O voo de drone depende da janela de clima — combinamos a data de captura com você.',
   },
-  {
-    pergunta: 'Dá pra usar antes da obra terminar?',
-    resposta:
-      'Sim — esse é exatamente o ponto forte. Você vende com base no que ainda vai existir, desde o lançamento.',
-  },
 ]
 
 const faqOpen = ref(-1)
