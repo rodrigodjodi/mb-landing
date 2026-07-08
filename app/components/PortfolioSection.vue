@@ -1,5 +1,29 @@
 <script setup lang="ts">
-import { portfolioClientes, portfolioChips } from '~/data/portfolio'
+import { portfolioChips } from '~/data/portfolio'
+
+interface ProjectCard {
+  title: string
+  url: string
+  to: string
+  target: string
+  coverImg: string
+  logo: string
+}
+
+const projects: Ref<ProjectCard[]> = ref([])
+const loading = ref(true)
+const showAll = ref(false)
+
+const visibleProjects = computed(() => (showAll.value ? projects.value : projects.value.slice(0, 6)))
+
+onMounted(async () => {
+  try {
+    const { recentCards } = await useProjectData()
+    projects.value = await recentCards()
+  } finally {
+    loading.value = false
+  }
+})
 </script>
 
 <template>
@@ -21,30 +45,43 @@ import { portfolioClientes, portfolioChips } from '~/data/portfolio'
         </span>
       </div>
 
-      <div class="mb-[18px] grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
-        <div v-for="cliente in portfolioClientes" :key="cliente.nome" class="flex flex-col border border-line bg-white">
-          <div class="relative aspect-[4/3] overflow-hidden">
-            <img :src="cliente.imagem" :alt="cliente.alt" loading="lazy" class="block h-full w-full object-cover" />
-            <span
-              v-if="cliente.destaque"
-              class="absolute left-3 top-3 bg-accent px-2 py-1 font-mono text-[9px] uppercase tracking-[.1em] text-white"
-            >
-              cliente recorrente
-            </span>
+      <p v-if="loading" class="font-mono text-xs uppercase tracking-[.1em] text-soft">
+        Carregando projetos…
+      </p>
+
+      <div v-else class="mb-[18px] grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <a
+          v-for="project in visibleProjects"
+          :key="project.to"
+          :href="project.to"
+          :target="project.target"
+          rel="noopener"
+          class="flex flex-col border border-line bg-white text-inherit no-underline transition-all duration-200 hover:-translate-y-[5px] hover:border-ink"
+        >
+          <div class="flex items-center gap-[7px] border-b border-line px-[14px] py-[11px]">
+            <span class="h-2 w-2 rounded-full bg-line" />
+            <span class="h-2 w-2 rounded-full bg-line" />
+            <span class="h-2 w-2 rounded-full bg-line" />
+            <span class="ml-[6px] truncate font-mono text-[10px] text-soft">{{ project.url }}</span>
           </div>
-          <div class="flex items-end justify-between gap-3 px-5 py-[18px]">
-            <div class="flex flex-col gap-1">
-              <span class="text-[19px] font-bold tracking-[-.01em]">{{ cliente.nome }}</span>
-              <span class="font-mono text-[10px] uppercase tracking-[.08em] text-soft">{{ cliente.tipo }}</span>
-            </div>
-            <div class="flex items-baseline gap-[5px]">
-              <span class="font-mono text-[30px] font-bold leading-none text-accent">
-                {{ String(cliente.projetos).padStart(2, '0') }}
-              </span>
-              <span class="font-mono text-[10px] text-soft">proj.</span>
-            </div>
+          <div class="aspect-[4/3] overflow-hidden bg-[#eceae3]">
+            <img :src="project.coverImg" :alt="project.title" loading="lazy" class="block h-full w-full object-cover" />
           </div>
-        </div>
+          <div class="flex items-center justify-between gap-[10px] px-4 py-4">
+            <span class="text-[15px] font-bold">{{ project.title }}</span>
+            <span class="whitespace-nowrap font-mono text-[11px] text-accent">veja o projeto ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <div v-if="!loading && projects.length > 6" class="mb-[18px] flex justify-center">
+        <button
+          type="button"
+          class="border border-line bg-white px-6 py-3 font-mono text-xs uppercase tracking-[.1em] transition-colors duration-200 hover:border-ink"
+          @click="showAll = !showAll"
+        >
+          {{ showAll ? 'Ver menos' : 'Ver mais' }}
+        </button>
       </div>
 
       <div class="mt-[14px] flex flex-wrap items-center gap-[14px]">
